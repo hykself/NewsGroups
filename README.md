@@ -1,6 +1,17 @@
 # 20 Newsgroups 文本分类项目
 
-## 项目结构说明
+## 新增文件说明
+
+### 评估输出文件
+1. `final_confusion_matrix.png` - 混淆矩阵可视化图表
+2. `full_classification_report.txt` - 详细分类指标报告
+3. `test_wrong_predictions.txt` - 错误预测案例分析（前50例）
+
+### 辅助文件
+1. `requirements.txt` - 项目依赖清单
+2. `nltk_data/` - NLTK资源缓存目录（自动生成）
+
+## 更新后的项目结构
 
 ### 核心代码文件
 1. `textPreprocessor.py` - 文本预处理模块
