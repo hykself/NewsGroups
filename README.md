@@ -2,49 +2,33 @@
 
 ## 新增文件说明
 
-### 评估输出文件
-1. `final_confusion_matrix.png` - 混淆矩阵可视化图表
-2. `full_classification_report.txt` - 详细分类指标报告
-3. `test_wrong_predictions.txt` - 错误预测案例分析（前50例）
+### 新增核心代码文件
+1. `knn_train.py` - KNN分类器训练模块
+   - 功能：使用K近邻算法进行模型训练
+   - 输出：`knn_classifier.pkl`、`knn_vectorizer.pkl`
 
-### 辅助文件
-1. `requirements.txt` - 项目依赖清单
-2. `nltk_data/` - NLTK资源缓存目录（自动生成）
+2. `dl_train.py` - 深度神经网络训练模块
+   - 功能：构建并训练深度神经网络
+   - 输出：`dnn_model.h5`、`label_encoder.pkl`
 
-## 更新后的项目结构
+3. `compare_model.py` - 模型对比分析模块
+   - 功能：对比不同模型的准确率和F1分数
+   - 输出：`accuracy_comparison.png`、`f1_comparison.png`
 
-### 核心代码文件
-1. `textPreprocessor.py` - 文本预处理模块
-   - 功能：数据清洗、分词、去停用词、词干提取
-   - 输入：原始新闻文本数据
-   - 输出：预处理后的文本和标签
-   - 关键方法：
-     - `clean_text()`：去除特殊字符和数字
-     - `load_data()`：加载并处理整个数据集
+### 新增生成文件
+1. `dnn_model.h5` - 保存的Keras神经网络模型
+2. `label_encoder.pkl` - 类别标签编码器
+3. `cv_scores.log` - 交叉验证结果日志
+4. `model_performance/` - 模型对比可视化目录
+   ├── accuracy_comparison.png
+   └── f1_comparison.png
 
-2. `train.py` - 模型训练模块
-   - 功能：特征工程(TF-IDF)、模型训练和保存
-   - 输入：预处理后的文本数据
-   - 输出：训练好的朴素贝叶斯模型(`.pkl`文件)
-   - 关键参数：
-     - `max_features=5000`：限制TF-IDF特征维度
-     - `alpha=0.1`：平滑系数
-
-3. `evaluate.py` - 模型评估模块
-   - 功能：模型性能评估和错误分析
-   - 输出：
-     - 分类报告(`.txt`)
-     - 混淆矩阵(`.png`)
-     - 错误样本分析(`.txt`)
-
-### 生成文件
-1. `tfidf_vectorizer.pkl` - 保存的TF-IDF向量化器
-2. `nb_classifier.pkl` - 训练好的朴素贝叶斯分类器
-3. `train_data.txt`/`test_data.txt` - 预处理后的数据集划分
-4. `processed_data.txt` - 完整预处理数据集备份
-
-## 使用指南
-
-### 安装依赖
+## 更新后的使用流程
 ```bash
-pip install -r requirements.txt
+# 训练所有模型
+python bys_train.py
+python knn_train.py
+python dl_train.py
+
+# 执行模型对比
+python compare_model.py
