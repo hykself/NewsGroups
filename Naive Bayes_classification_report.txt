@@ -1,0 +1,28 @@
+Naive Bayes 分类评估报告
+============================================================
+                          precision    recall  f1-score   support
+
+             alt.atheism     0.8333    0.8850    0.8584      1000
+           comp.graphics     0.8732    0.9160    0.8941      1000
+ comp.os.ms-windows.misc     0.9242    0.9270    0.9256      1000
+comp.sys.ibm.pc.hardware     0.8853    0.9030    0.8941      1000
+   comp.sys.mac.hardware     0.9260    0.9390    0.9325      1000
+          comp.windows.x     0.9256    0.9200    0.9228      1000
+            misc.forsale     0.9083    0.9410    0.9244      1000
+               rec.autos     0.9394    0.9450    0.9422      1000
+         rec.motorcycles     0.9778    0.9690    0.9734      1000
+      rec.sport.baseball     0.9868    0.9690    0.9778      1000
+        rec.sport.hockey     0.9713    0.9800    0.9756      1000
+               sci.crypt     0.9818    0.9710    0.9764      1000
+         sci.electronics     0.9300    0.9040    0.9168      1000
+                 sci.med     0.9853    0.9380    0.9611      1000
+               sci.space     0.9680    0.9690    0.9685      1000
+  soc.religion.christian     0.9513    0.9990    0.9746       997
+      talk.politics.guns     0.8903    0.9410    0.9149      1000
+   talk.politics.mideast     0.9485    0.9760    0.9621      1000
+      talk.politics.misc     0.8652    0.8020    0.8324      1000
+      talk.religion.misc     0.7690    0.6590    0.7097      1000
+
+                accuracy                         0.9226     19997
+               macro avg     0.9220    0.9226    0.9219     19997
+            weighted avg     0.9220    0.9226    0.9219     19997
